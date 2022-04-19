@@ -1,0 +1,59 @@
+// Enabling Dark Mode/Light Mode
+
+@import "~@angular/material/theming";
+@include mat-core();
+
+$light-app-theme: mat-light-theme(
+  (
+    color: (
+      primary: mat-palette($mat-indigo),
+      accent: mat-palette($mat-pink, A200, A100, A400),
+      warn: mat-palette($mat-red),
+    ),
+  )
+);
+
+$dark-app-theme: mat-dark-theme(
+  (
+    color: (
+      primary: mat-palette($mat-pink),
+      accent: mat-palette($mat-blue-grey, A200, A100, A400),
+      warn: mat-palette($mat-red),
+    ),
+  )
+);
+
+.light-theme {
+  @include angular-material-theme($light-app-theme);
+}
+
+.dark-theme {
+  @include angular-material-color($dark-app-theme);
+}
+
+// Responsive display
+
+@mixin displaysize($width: 1007px) {
+  .mobile {
+    display: none;
+  }
+
+  @media screen and (max-width: $width) {
+    .mobile {
+      display: unset;
+    }
+    .desktop {
+      display: none;
+    }
+  }
+}
+
+// body
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial,
+    Lucida Grande, sans-serif;
+}

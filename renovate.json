@@ -1,0 +1,33 @@
+{
+  "prConcurrentLimit": "20",
+  "dependencyDashboard": true,
+  "schedule": ["before 2am"],
+  "labels": ["dependencies"],
+  "packageRules": [
+    {
+      "matchPackageNames": ["angular"],
+      "allowedVersions": "<=13"
+    },
+    {
+      "matchDepTypes": ["optionalDependencies"],
+      "addLabels": ["optional"]
+    },
+    {
+      "matchPackagePatterns": ["@angular"],
+      "labels": ["angular", "dependencies", "patch"],
+      "matchUpdateTypes": ["patch"],
+      "groupName": " Patch Angular Dependencies",
+      "automerge": true
+    },
+    {
+      "matchPackagePatterns": ["@angular"],
+      "labels": ["angular", "dependencies", "minor"],
+      "matchUpdateTypes": ["minor"],
+      "groupName": " Minor Angular Dependencies",
+      "automerge": true
+    }
+  ],
+  "npm": {
+    "stabilityDays": 3
+  }
+}

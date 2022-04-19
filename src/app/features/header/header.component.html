@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="flex-header">
+    <div>
+      <button mat-icon-button (click)="navbarState.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <div class="headline">
+      <a>A T H E N A</a>
+    </div>
+
+    <div class="desktop">
+      <button mat-icon-button>
+        <mat-icon>home</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon>manage_accounts</mat-icon>
+      </button>
+      <button mat-icon-button (click)="styleService.toggle()">
+        <mat-icon>dark_mode</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="flex-component-header"
+    ><div>
+      <p>Hier soll eine Pfad-Übersicht stehen</p>
+    </div></mat-toolbar-row
+  >
+</mat-toolbar>

@@ -1,0 +1,19 @@
+@use "src/styles" as style;
+@include style.displaysize();
+
+mat-sidenav {
+  width: 12em;
+}
+
+mat-divider {
+  margin-inline: 15px;
+}
+
+.item-text {
+  margin-left: 15px;
+  justify-self: center;
+}
+
+.fill {
+  height: 100vh;
+}

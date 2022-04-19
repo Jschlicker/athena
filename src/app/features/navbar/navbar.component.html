@@ -1,0 +1,37 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #sidenav
+    class="sidenav"
+    [mode]="mobileQuery.matches ? 'over' : 'side'"
+    [fixedInViewport]="mobileQuery.matches"
+  >
+    <mat-nav-list>
+      <div class="mobile">
+        <mat-list-item
+          ><span class="material-icons-outlined">home</span
+          ><span class="item-text">Overview</span></mat-list-item
+        >
+        <mat-list-item
+          ><span class="material-icons-outlined">manage_accounts</span
+          ><span class="item-text">Profile</span></mat-list-item
+        >
+        <mat-list-item (click)="styleService.toggle()"
+          ><span class="material-icons-outlined">dark_mode</span
+          ><span class="item-text">{{
+            styleService.currentStyle
+          }}</span></mat-list-item
+        >
+        <mat-divider></mat-divider>
+      </div>
+      <div>
+        <mat-list-item routerLink="features/characters"
+          ><mat-icon>people_outline</mat-icon
+          ><span class="item-text">Characters</span></mat-list-item
+        >
+      </div>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="fill"><router-outlet></router-outlet></div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
