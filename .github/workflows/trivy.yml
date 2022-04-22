@@ -22,19 +22,23 @@ jobs:
 #         uses: github/codeql-action/upload-sarif@v1
 #         with:
 #           sarif_file: 'trivy-results.sarif'
-      - name: Send email
-        uses: dawidd6/action-send-mail@v3.6.1
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v3
         with:
-          server_adress: smtp-mail.outlook.com
-          server_port: 587
-#           username: ${{secrets.MAIL_USERNAME}}
-#           password: ${secrets.MAIL_PASSWORD}}
-          subject: Trivy Result 
+          # Required mail server address:
+          server_address: smtp.gmail.com
+          # Required mail server port:
+          server_port: 465
+          subject: Test Trivy
+          # Required recipients' addresses:
           to: julian.schlicker@outlook.de
-          from: Trivy-Action
+          # Required sender full name (address can be skipped):
+          from: GitHub Action Trivy # <user@example.com>
+          # Optional whether this connection use TLS (default is true if server_port is 465)
           secure: true
-          body: Build job of Trivy completed! Now you can watch the results.
-          attachments: trivy-results.sarif 
+          # Optional plain body:
+          body: Build job of completed successfully!
+          attachments: trivy-results.sarif
           
           
 
