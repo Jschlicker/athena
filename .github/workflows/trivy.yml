@@ -31,7 +31,7 @@ jobs:
           server_port: 587
           subject: Test Trivy
           # Required recipients' addresses:
-          to: ${{MAIL_USERNAME}}
+          to: ${{secrets.MAIL_USERNAME}}
           # Required sender full name (address can be skipped):
           from: GitHub Action Trivy # <user@example.com>
           # Optional whether this connection use TLS (default is true if server_port is 465)
