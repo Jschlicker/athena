@@ -37,7 +37,7 @@ jobs:
           # Required sender full name (address can be skipped):
           from: GitHub Action Trivy # <user@example.com>
           # Optional whether this connection use TLS (default is true if server_port is 465)
-          secure: true
+#           secure: true
           # Optional plain body:
           body: Build job of completed successfully!
 #           attachments: trivy-results.sarif
