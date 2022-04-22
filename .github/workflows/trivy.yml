@@ -26,9 +26,9 @@ jobs:
         uses: dawidd6/action-send-mail@v3
         with:
           # Required mail server address:
-          server_address: smtp.gmail.com
+          server_address: smtp-mail.outlook.com
           # Required mail server port:
-          server_port: 465
+          server_port: 587
           subject: Test Trivy
           # Required recipients' addresses:
           to: julian.schlicker@outlook.de
