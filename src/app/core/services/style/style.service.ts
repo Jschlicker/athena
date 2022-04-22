@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class StyleService {
   public currentStyle: string;
@@ -10,6 +10,6 @@ export class StyleService {
 
   toggle() {
     this.currentStyle =
-      this.currentStyle === 'dark-theme' ? 'light-theme' : 'dark-theme';
+      this.currentStyle === "dark-theme" ? "light-theme" : "dark-theme";
   }
 }

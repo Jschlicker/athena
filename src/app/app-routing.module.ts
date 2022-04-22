@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { CharactersComponent } from './features/characters/characters.component';
+import { NgModule } from "@angular/core";
+import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
+import { CharactersComponent } from "./components/characters/characters.component";
 
 const appRoutes: Routes = [
   {
-    path: 'features/characters',
+    path: "components/characters",
     component: CharactersComponent,
   },
 ];
@@ -13,7 +13,6 @@ const appRoutes: Routes = [
   imports: [
     RouterModule.forRoot(appRoutes, {
       enableTracing: false,
-      preloadingStrategy: PreloadAllModules,
     }),
   ],
   exports: [RouterModule],
