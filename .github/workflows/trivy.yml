@@ -30,7 +30,7 @@ jobs:
 #           username: ${{secrets.MAIL_USERNAME}}
 #           password: ${secrets.MAIL_PASSWORD}}
           subject: Trivy Result 
-          to: julian.schlicker@md.de
+          to: julian.schlicker@outlook.de
           from: Trivy-Action
           secure: true
           body: Build job of Trivy completed! Now you can watch the results.
