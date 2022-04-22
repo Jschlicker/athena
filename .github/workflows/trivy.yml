@@ -26,7 +26,7 @@ jobs:
         uses: dawidd6/action-send-mail@v3
         with:
           # Required mail server address:
-          server_address: securesmtprelay.t-online.de
+          server_address: securesmtp.t-online.de
           # Required mail server port:
           server_port: 465
           username: ${{secrets.MAIL_USERNAME}}
