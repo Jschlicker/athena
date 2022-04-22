@@ -18,17 +18,17 @@ jobs:
           output: 'trivy-results.sarif'
           severity: "CRITICAL, HIGH, MEDIUM, LOW, UNKNOWN"
 
-#       - name: Upload Trivy scan results to GitHub Security tab
-#         uses: github/codeql-action/upload-sarif@v1
-#         with:
-#           sarif_file: 'trivy-results.sarif'
+      - name: Upload Trivy scan results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v1
+        with:
+          sarif_file: 'trivy-results.sarif'
       - name: Send mail
         uses: dawidd6/action-send-mail@v3
         with:
           # Required mail server address:
-          server_address: smtp-mail.outlook.com
+          server_address: securesmtprelay.t-online.de
           # Required mail server port:
-          server_port: 587
+          server_port: 465
           username: ${{secrets.MAIL_USERNAME}}
           password: ${{secrets.MAIL_PASSWORD}}
           subject: Test Trivy
@@ -41,7 +41,8 @@ jobs:
           # Optional plain body:
           body: Build job of completed successfully!
 #           attachments: trivy-results.sarif
-          
+   
+
           
 
       
