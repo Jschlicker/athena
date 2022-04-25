@@ -1,4 +1,4 @@
-name: Deploy to Firebase Hosting on merge
+name: Deploy to Firebaseon merge
 on:
   workflow_dispatch:
 #   push:
@@ -7,7 +7,7 @@ on:
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
-    environment: firebase
+    name: Deploy to Firebase on merge
     steps:
       - uses: actions/checkout@v3
       - run: npm ci && npm run build
