@@ -1,5 +1,5 @@
 {
-  "prConcurrentLimit": "20",
+  "prConcurrentLimit": 20,
   "dependencyDashboard": true,
   "schedule": ["before 2am"],
   "labels": ["dependencies"],
