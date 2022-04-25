@@ -1,4 +1,4 @@
-name: Deploy to Firebaseon merge
+name: Deploy to Firebase on merge
 on:
   workflow_dispatch:
 jobs:
