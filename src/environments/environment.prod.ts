@@ -1,6 +1,6 @@
 export const environment = {
   firebase: {
-    apiKey: process.env["API_KEY"], // apiKey: "AIzaSyDMJRMbWcJLVtyATNFz8V-RLDw8LezYzss",
+    apiKey: process.env["API_KEY"],
     authDomain: process.env["AUTH_DOMAIN"],
     projectId: process.env["PROJECT_ID"],
     storageBucket: process.env["STORAGE_BUCKET"],
