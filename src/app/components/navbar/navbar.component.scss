@@ -14,6 +14,10 @@ mat-divider {
   justify-self: center;
 }
 
+// Fixxed header and scrollable body
+
 .fill {
-  height: 100vh;
+  height: calc(
+    100vh - (style.$flexHeaderHeight + style.$flexComponentHeaderHeight)
+  );
 }

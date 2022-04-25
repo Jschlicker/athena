@@ -1,7 +1,10 @@
-// Enabling Dark Mode/Light Mode
-
 @import "~@angular/material/theming";
 @include mat-core();
+
+$flexHeaderHeight: 56px;
+$flexComponentHeaderHeight: 75px;
+
+// Enabling Dark Mode/Light Mode
 
 $light-app-theme: mat-light-theme(
   (
