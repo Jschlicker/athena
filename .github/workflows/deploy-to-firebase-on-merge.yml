@@ -15,16 +15,16 @@ jobs:
       STORAGE_BUCKET: ${{ secrets.STORAGE_BUCKET }}
     steps:
       - name: Checkout code
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
       
       - name: Install dependencies
-      - run: npm install
+        run: npm install
       
       - name: Build angular app
-      - run: npm run build
+        run: npm run build
           
       - name: Deploy to firebase
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_ATHENA_4F232 }}"
