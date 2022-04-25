@@ -16,15 +16,34 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      
+  
       - name: Install dependencies and build application
         run: npm ci && npm run build
-      
-      - name: Deploy to firebase
-        uses: FirebaseExtended/action-hosting-deploy@v0
+        
+      - name: Archive Production Artifact
+        uses: actions/upload-artifact@master
         with:
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_ATHENA_4F232 }}"
-          channelId: live
-          projectId: athena-4f232
-          target: athena-4f232
+          name: dist
+          path: dist
+        
+      - name: Download Artifact
+        uses: actions/download-artifact@master
+        with:
+          name: dist
+          path: dist
+          
+#       - name: Deploy to Firebase
+#         uses: w9jds/firebase-action@master
+#         with:
+#           args: deploy --only hosting
+#         env:
+#           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      
+#       - name: Deploy to firebase
+#         uses: FirebaseExtended/action-hosting-deploy@v0
+#         with:
+#           repoToken: "${{ secrets.GITHUB_TOKEN }}"
+#           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_ATHENA_4F232 }}"
+#           channelId: live
+#           projectId: athena-4f232
+#           target: athena-4f232
