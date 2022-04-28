@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "target": "athena",
+    "target": "athena-4f232",
     "public": "dist/athena",
     "ignore": [
       "**/.*"
