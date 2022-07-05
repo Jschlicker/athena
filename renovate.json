@@ -18,12 +18,14 @@
       },
       {
          "matchUpdateTypes": "minor",
-         "labels": ["minor"]
+         "labels": ["minor"],
+         "automerge": true
       },
       {
          "matchUpdateTypes": "major",
          "labels": ["major"],
          "dependencyDashboardApproval": true
+         "automerge": true
       },
       {
          "matchDepTypes": ["devDependencies"],
