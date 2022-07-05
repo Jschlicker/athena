@@ -7,11 +7,6 @@
    "fetchReleaseNotes": true,
    "automergeType": "pr",
    "rebaseStalePrs": true,
-   "schedule": [
-      "after 10pm every weekday",
-      "before 5am every weekday",
-      "every weekend"
-   ],
    "docker": {
       "enabled": false
    },
