@@ -24,7 +24,7 @@
       {
          "matchUpdateTypes": "major",
          "labels": ["major"],
-         "dependencyDashboardApproval": true
+         "dependencyDashboardApproval": true,
          "automerge": true
       },
       {
