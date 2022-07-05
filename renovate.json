@@ -1,0 +1,46 @@
+{
+  "dependencyDashboard": true,
+  "dependencyDashboardAutoclose": true,
+  "internalChecksFilter": "strict",
+  "semanticCommits": "enabled",
+  "rebaseWhen": "auto",
+  "fetchReleaseNotes": true,
+  "automergeType": "pr",
+  "rebaseStalePrs": true,
+  "docker": {
+    "enabled": false
+  },
+  "packageRules": [
+    {
+      "matchUpdateTypes": "patch",
+      "labels": ["patch"],
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": "minor",
+      "labels": ["minor"]
+    },
+    {
+      "matchUpdateTypes": "major",
+      "labels": ["major"],
+      "dependencyDashboardApproval": true
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": "patch",
+      "labels": ["patch", "dev"],
+      "automerge": true
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": "minor",
+      "labels": ["minor", "dev"],
+      "automerge": true
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": "major",
+      "labels": ["major", "dev"]
+    },
+  ]
+}
