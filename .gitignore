@@ -39,3 +39,4 @@ testem.log
 Thumbs.db
 
 .angular
+/apps/tale-factory-app/src/environments/environment.ts
