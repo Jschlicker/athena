@@ -1,0 +1,24 @@
+.header-container {
+    height: 70vh;
+}
+
+.background {
+    background-image: url("../../../assets/components/login/login-background.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.logo-white {
+    max-height: 7vh;
+    max-width: 7vw;
+}
+
+.logo {
+    height: 38vh;
+    width: 45vh;
+}
+
+.p-card {
+    box-shadow: 1px 8px rgba(0, 0, 0, 0.08), 0px 3px 4px rgba(0, 0, 0, 0.1), 0px 1px 4px -1px rgba(0, 0, 0, 0.1);
+    width: 25vw;
+}

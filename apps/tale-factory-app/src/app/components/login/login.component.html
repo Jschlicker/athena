@@ -1,0 +1,91 @@
+<div class="flex-column">
+    <div class="header-container background flex-column">
+        <div class="flex flex-row p-4 justify-content-around">
+            <div class="flex flex-row">
+                <img src="../../../assets/components/login/logo-white.svg" alt="taleFactory-logo" class="logo-white" />
+                <a class="font-medium text-4xl text-white align-self-center pl-2">taleFactory</a>
+            </div>
+            <ul class="flex list-none font-medium text-lg text-white align-items-center">
+                <li class="px-4"><a>Home</a></li>
+                <li class="px-4"><a>About</a></li>
+                <li class="px-4"><a>Services</a></li>
+                <li class="px-4">
+                    <p-button styleClass="font-bold p-button p-button-raised p-button-success" label="Sign In"></p-button>
+                </li>
+            </ul>
+        </div>
+        <div class="flex flex-row p-8 justify-content-center">
+            <div class="flex flex-column pr-8">
+                <a class="flex max-w-30rem pt-8 font-medium text-6xl text-white">Everything for playing Pen and Paper.</a>
+                <p-button
+                    class="flex flex-wrap pt-8"
+                    styleClass="p-button-lg p-button-raised p-button-info"
+                    label="Sign In"
+                    (click)="auth.loginWithRedirect()"
+                ></p-button>
+            </div>
+            <div class="flex pl-8">
+                <img src="../../../assets/components/login/login-example-img.png" alt="example-image" class="logo" />
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-row justify-content-center py-8">
+        <p-card header="Characters" class="p-card mx-4 fadeinleft animation-duration-2000">
+            <i class="flex justify-content-center pi pi-user-edit icon" style="font-size: 2rem"></i>
+            <span
+                >Creating, editing and saving your character is no problem at all with our app. We offer many support tools
+                that will help even the beginners to avoid mistakes.</span
+            >
+        </p-card>
+        <p-card header="Cloud native" class="p-card mx-4 fadeinright animation-duration-2000">
+            <i class="flex justify-content-center pi pi-cloud"></i>
+            <span>Accessible from anywhere. Optimized for use on mobile devices.</span>
+        </p-card>
+    </div>
+
+    <div class="surface-ground px-4 py-8 md:px-6 lg:px-8">
+        <div class="text-900 font-bold text-6xl pb-4 text-center">Services we provide</div>
+        <div class="text-700 text-xl pb-6 text-center line-height-3">
+            taleFactory offers you a comprehensive portfolio of tools and services so that you can concentrate fully on your
+            PnP.
+        </div>
+
+        <div class="flex flex-row justify-content-center grid py-8">
+            <div class="col-12 lg:col-4" *ngFor="let item of SERVICES">
+                <div class="p-3 h-full">
+                    <div class="flex flex-column p-3 h-full" style="border-radius: 6px">
+                        <i class="flex justify-content-center pb-4 pi {{ item.icon }} icon" style="font-size: 5rem"></i>
+                        <hr class="border-top-1 border-none surface-border" />
+                        <div class="flex justify-content-center pt-4 text-900 font-medium text-xl pb-4">
+                            {{ item.headline }}
+                        </div>
+                        <div class="flex justify-content-center text-600 text-lg">{{ item.description }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="surface-section px-4 py-8 md:px-6 lg:px-8">
+        <div class="text-700 text-center">
+            <div class="text-black-600 font-bold pb-3"><i class="pi pi-github"></i>&nbsp;POWERED BY GITHUB</div>
+            <div class="text-900 font-bold text-5xl pb-3">Join Our Community</div>
+            <div class="text-700 text-2xl pb-5">Join us now!</div>
+            <p-button
+                label="Sign In"
+                icon="pi pi-sign-in"
+                class="px-5 py-3"
+                styleClass="font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap"
+                (click)="auth.loginWithRedirect()"
+            ></p-button>
+            <p-button
+                label="Join Now"
+                icon="pi pi-github"
+                class="px-5 py-3"
+                styleClass="font-bold px-5 py-3 p-button-raised p-button-rounded p-button-secondary white-space-nowrap"
+                (click)="redirect()"
+            ></p-button>
+        </div>
+    </div>
+</div>
