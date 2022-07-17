@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { PrimeNGConfig } from "primeng/api";
 
 @Component({
-    selector: "tale-factory-monorepo-root",
+    selector: "tf-app",
     templateUrl: "./app.component.html",
     styleUrls: ["./app.component.scss"],
 })
