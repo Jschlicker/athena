@@ -30,6 +30,12 @@
             "files": ["*.js", "*.jsx"],
             "extends": ["plugin:@nrwl/nx/javascript"],
             "rules": {}
+        },
+        {
+            "files": ["*.{js,ts,html,scss}"],
+            "rules": {
+                "indent": ["error", 4]
+            }
         }
     ]
 }
