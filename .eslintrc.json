@@ -32,7 +32,7 @@
             "rules": {}
         },
         {
-            "files": ["*.{js,ts,html,scss}"],
+            "files": ["*.{js,ts}"],
             "rules": {
                 "indent": ["error", 4]
             }
