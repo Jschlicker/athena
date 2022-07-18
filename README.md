@@ -1,5 +1,3 @@
-
-
 # TaleFactoryMonorepo
 
 This project was generated using [Nx](https://nx.dev).
@@ -13,12 +11,12 @@ These capabilities include generating applications, libraries, etc as well as th
 
 Below are our core plugins:
 
-- [Angular](https://angular.io)
-  - `ng add @nrwl/angular`
-- [Nest](https://nestjs.com)
-  - `ng add @nrwl/nest`
-- [Node](https://nodejs.org)
-  - `ng add @nrwl/node`
+-   [Angular](https://angular.io)
+    -   `ng add @nrwl/angular`
+-   [Nest](https://nestjs.com)
+    -   `ng add @nrwl/nest`
+-   [Node](https://nodejs.org)
+    -   `ng add @nrwl/node`
 
 There are also many [community plugins](https://nx.dev/community) you could add.
 
@@ -53,5 +51,3 @@ Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
 ## Understand your workspace
 
 Run `nx graph` to see a diagram of the dependencies of your projects.
-
-
